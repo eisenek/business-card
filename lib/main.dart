@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class MiCardFlutterApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -21,7 +23,7 @@ class MiCardFlutterApp extends StatelessWidget {
                     'https://c8.alamy.com/comp/T8WBC2/cannabis-marijuana-plant-growing-indoor-imagw-of-a-T8WBC2.jpg'),
               ),
               Text(
-                'Me',
+                'Tomasz Bińczyk',
                 style: TextStyle(
                     fontSize: 40.0,
                     color: Colors.white,
@@ -35,37 +37,31 @@ class MiCardFlutterApp extends StatelessWidget {
                     letterSpacing: 2.5,
                     fontWeight: FontWeight.bold,
                   )),
-              Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.all(10.0),
+              SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(color: Colors.teal.shade100)),
+              Card(
                   margin:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(Icons.phone, color: Colors.teal),
-                      SizedBox(width: 10.0),
-                      Text('+48 884-779-998',
-                          style: TextStyle(
-                              fontFamily: 'Source Sans Pro',
-                              fontSize: 20.0,
-                              color: Colors.teal.shade900))
-                    ],
+                  child: ListTile(
+                    leading: Icon(Icons.phone, color: Colors.teal),
+                    title: Text('+48 884-779-998',
+                        style: TextStyle(
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 20.0,
+                            color: Colors.teal.shade900)),
                   )),
-              Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.all(10.0),
+              Card(
                   margin:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(Icons.email, color: Colors.teal),
-                      SizedBox(width: 10.0),
-                      Text('tomasz.binczyk@gmail.com',
-                          style: TextStyle(
-                              fontFamily: 'Source Sans Pro',
-                              fontSize: 20.0,
-                              color: Colors.teal.shade900))
-                    ],
+                  child: ListTile(
+                    leading: Icon(Icons.email, color: Colors.teal),
+                    title: Text('tomasz.binczyk@gmail.com',
+                        style: TextStyle(
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 19.0,
+                            color: Colors.teal.shade900)),
                   ))
             ],
           ),
